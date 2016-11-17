@@ -16,10 +16,10 @@ public class AuthorController {
   @Autowired
   AuthorDao authorDao;
 
-  @RequestMapping("/profiles")
+  @RequestMapping("/profile")
   public String authorProfiles(Map<String, Object> model) {
-    List<Author> authors = authorDao.findAll();
-    model.put("authors", authors);
-    return "authors_profiles";
+    Author author = authorDao.findAll().get(0);
+    model.put("author", author);
+    return "author_profile";
   }
 }
