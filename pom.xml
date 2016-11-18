@@ -6,7 +6,11 @@
 
     <groupId>com.redkite</groupId>
     <artifactId>web-blog</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>Kreol</module>
+    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -27,6 +31,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
         <dependency>
             <groupId>com.datastax.cassandra</groupId>

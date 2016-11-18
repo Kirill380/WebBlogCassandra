@@ -6,10 +6,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Post</title>
-    <link rel="stylesheet" href="<@spring.url '/project/css/footer.css'/>">
-    <link rel="stylesheet" href="<@spring.url '/project/css/posts.css'/>">
-    <link rel="stylesheet" href="<@spring.url '/vendor/bootstrap-3.3.7/css/bootstrap.css'/>">
-    <link rel="stylesheet" href="<@spring.url '/vendor/bootstrap-3.3.7/css/bootstrap-theme.css'/>">
+    <link rel="stylesheet" href="/project/css/footer.css">
+    <link rel="stylesheet" href="/project/css/posts.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-3.3.7/css/bootstrap-theme.css">
 </head>
 <body>
 <#include "header.ftl"/>

@@ -17,7 +17,7 @@ public class PostController {
   private PostDao postDao;
 
 
-  @RequestMapping("/home")
+  @RequestMapping(value = {"/", "/home"})
   public String home(Map<String, Object> model) {
     List<Post> posts = postDao.findAll();
     model.put("posts", posts);

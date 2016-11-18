@@ -1,7 +1,11 @@
-INSERT INTO author(email,  user_name, password) VALUES('kreol_123@ukr.net', 'Kirill Liubun', 'send08');
-INSERT INTO author(email,  user_name, password) VALUES('example@test.com', 'John Doe', 'qwerty');
-INSERT INTO author(email,  user_name, password) VALUES('gendalf@wizard.com', 'Gandalf the White', 'youshallpass');
-INSERT INTO author(email,  user_name, password) VALUES('anakin@dark.side', 'Darth Vader', 'deathstar');
+INSERT INTO author(email,  user_name, password) VALUES('kreol_123@ukr.net', 'Kirill Liubun', '$2a$04$9CJJLujA5xhH13YjAcsjduU8a8t2VSeRwtl.Gs0/OKjg4Ag0wvMtS'); // pwd: send08
+INSERT INTO author(email,  user_name, password) VALUES('example@test.com', 'John Doe', '$2a$04$8j1hi7rayBY9bGc4vBR.F.DBGMSybYi8DC7frgFlEClxXQmU3xWDK'); // pwd: qwerty
+INSERT INTO author(email,  user_name, password) VALUES('gendalf@wizard.com', 'Gandalf the White', '$2a$04$eYYhHJAF4TP07b4nvf8bDuOpvtst/3Clq0x7rQFuaKVQtU3qojBu.'); // pwd: youshallpass
+INSERT INTO author(email,  user_name, password) VALUES('anakin@dark.side', 'Darth Vader', '$2a$04$k7yT1qlCa0YHHGPouFgEaudLxQ.6OrBMgJhvflzuuExrTIKITICJu'); // pwd : deathstar
+
+
+
+
 
 INSERT INTO post(id, title, post_body, author, tags, comments, publish_date, votes) VALUES(
  1,
