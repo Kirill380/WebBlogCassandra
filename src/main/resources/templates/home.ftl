@@ -14,8 +14,12 @@
 <body>
 <#include "header.ftl"/>
 <div class="container">
-
-    <div class="post-container">
+    <div class="controls">
+        <div class="controls_create-post">
+           <span class="create-post jsCreatePost">Create Post</span>
+        </div>
+    </div>
+    <div id="container" class="post-container">
     <#list posts as post>
         <@p.post post/>
     </#list>

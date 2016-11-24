@@ -1,13 +1,13 @@
 <#macro post post>
-<div class="post">
+<div id="${post.id}" class="post">
     <div class="post_title">${post.title}</div>
     <div class="post_content">
         <div class="content">
             <div class="content_votes">
                 <div class="votes">
-                    <div class="votes_up"></div>
+                    <div class="votes_up jsUp"></div>
                     <div class="votes_count">${post.getVoteScore()}</div>
-                    <div class="votes_down"></div>
+                    <div class="votes_down jsDown"></div>
                 </div>
             </div>
             <div class="content_body">${post.body}</div>
@@ -29,7 +29,7 @@
     </div>
     <div class="comment_section">
         <div class="comment_list">
-            <div class="list">
+            <div id="list" class="list">
                 <#list post.comments as comment>
                     <div class="list_item">
                         <div class="item">
@@ -41,7 +41,7 @@
                 </#list>
             </div>
         </div>
-        <div class="comment_add">add a comment</div>
+        <div class="comment_add jsAddComment">add a comment</div>
     </div>
 </div>
 </#macro>

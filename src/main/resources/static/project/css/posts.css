@@ -8,6 +8,15 @@
     margin: auto;
 }
 
+
+.votes_up:hover {
+    border-color: transparent transparent #f48024 transparent;
+}
+
+.votes_down:hover {
+    border-color: #f48024 transparent transparent  transparent;
+}
+
 .votes_count {
     margin: 8px 0;
     font-size: 20px;
@@ -135,4 +144,27 @@
 
 .item_author-email {
     color: #07C;
+}
+
+.controls {
+    margin-top: 70px;
+}
+
+.controls_create-post {
+    position: relative;
+}
+
+.create-post {
+    position: absolute;
+    right: 0;
+    padding: 4px 10px 5px;
+    font-size: 14px;
+    line-height: 1.3;
+    color: #FFF;
+    background: #9fa6ad;
+    cursor: pointer;
+}
+
+.create-post:hover {
+    background: #f48024;
 }
