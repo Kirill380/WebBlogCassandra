@@ -21,7 +21,7 @@ public class AuthorController {
   @RequestMapping("/profile")
   public String authorProfiles(Map<String, Object> model) {
     Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-    Author author = authorDao.find(auth.getName());
+    Author author = authorDao.getAuthor(auth.getName());
     model.put("author", author);
     return "author_profile";
   }

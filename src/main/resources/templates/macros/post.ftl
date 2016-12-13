@@ -25,7 +25,6 @@
             <div class="author_name">${post.author}</div>
             <div class="author_publish-date">${post.publishDate?datetime}</div>
         </div>
-
     </div>
     <div class="comment_section">
         <div class="comment_list">
@@ -42,6 +41,13 @@
             </div>
         </div>
         <div class="comment_add jsAddComment">add a comment</div>
+        <div class="jsPopUpComment" style="display: none">
+            <form  action="/api/post/${post.id}/comment" method="post">
+                <input type="text" name="commentBody">
+                <button class="bClose jsComment"  value="submit">
+            </form>
+        </div>
     </div>
 </div>
+
 </#macro>

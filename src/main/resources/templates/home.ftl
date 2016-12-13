@@ -24,8 +24,13 @@
         <@p.post post/>
     </#list>
     </div>
+    <div class="jsPop" style="display:none">
+        <form action="/api/post/" method="post">
 
+        </form>
+    </div>
 </div>
 <#include "footer.ftl"/>
+<script src="/project/js/post.js"></script>
 </body>
 </html>

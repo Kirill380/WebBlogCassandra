@@ -9,22 +9,26 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class AuthorDao extends AbstractCassandraDao<Author, String> {
 
-  @Autowired
-  private PasswordEncoder passwordEncoder;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
-  @Override
-  protected Class<Author> getColumnFamilyClass() {
-    return Author.class;
-  }
+    @Override
+    protected Class<Author> getColumnFamilyClass() {
+        return Author.class;
+    }
 
-  @Override
-  protected String getColumnFamilyName() {
-    return "author";
-  }
+    @Override
+    protected String getColumnFamilyName() {
+        return "author";
+    }
 
-  @Override
-  public Author save(Author entity) {
-    entity.setPassword(passwordEncoder.encode(entity.getPassword()));
-    return super.save(entity);
-  }
+    @Override
+    public Author save(Author entity) {
+        entity.setPassword(passwordEncoder.encode(entity.getPassword()));
+        return super.save(entity);
+    }
+
+    public Author getAuthor(String email) {
+        return find(email);
+    }
 }

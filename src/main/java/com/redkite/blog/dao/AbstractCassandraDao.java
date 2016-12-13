@@ -39,16 +39,17 @@ public abstract class AbstractCassandraDao<T, K> {
     return ConsistencyLevel.ONE;
   }
 
-  public T save(T entity) {
+  protected T save(T entity) {
     LOG.debug("Save entity " + entity);
     Statement saveStatement = getMapper().saveQuery(entity);
     saveStatement.setConsistencyLevel(getConsistencyLevel()); //TODO hardcoded
     getSession().execute(saveStatement);
+
     return entity;
   }
 
 
-  public T find(K key) {
+  protected T find(K key) {
     return getMapper().get(key);
   }
 
@@ -65,7 +66,7 @@ public abstract class AbstractCassandraDao<T, K> {
   }
 
 
-  public void remove(K key) {
+  protected void remove(K key) {
     getMapper().delete(key);
   }
 

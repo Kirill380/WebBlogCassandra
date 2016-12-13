@@ -8,7 +8,7 @@ INSERT INTO author(email,  user_name, password) VALUES('anakin@dark.side', 'Dart
 
 
 INSERT INTO post(id, title, post_body, author, tags, comments, publish_date, votes) VALUES(
- 1,
+ 2,
  'The dark side',
  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eaque est eveniet explicabo harum incidunt ipsam nemo quam temporibus ullam. Culpa, deserunt, provident! Aspernatur blanditiis dolores nemo repudiandae tenetur unde.',
  'anakin@dark.side',
