@@ -1,14 +1,15 @@
 package com.redkite.blog.model;
 
-import lombok.Data;
-
 import com.datastax.driver.mapping.annotations.Column;
 import com.datastax.driver.mapping.annotations.PartitionKey;
 import com.datastax.driver.mapping.annotations.Table;
 
-import java.sql.Timestamp;
+import lombok.Data;
+
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 @Data
 @Table(name = "post")
@@ -16,7 +17,7 @@ public class Post {
 
   @PartitionKey
   @Column
-  private Long id;
+  private UUID id;
 
   @Column
   private String title;
@@ -31,17 +32,17 @@ public class Post {
   private Date publishDate;
 
   @Column
-  private List<String> tags;
+  private List<String> tags = new ArrayList<>();
 
   @Column
-  private List<Comment> comments;
+  private List<Comment> comments = new ArrayList<>();
 
   @Column
-  private List<Vote> votes;
+  private List<Vote> votes = new ArrayList<>();
 
 
   public int getVoteScore() {
-    return votes.stream().mapToInt( v -> v.getPositive() ? 1 : -1).sum();
+    return  votes != null && !votes.isEmpty() ? votes.stream().mapToInt( v -> v.getPositive() ? 1 : -1).sum() : 0;
   }
 
 }

@@ -13,12 +13,19 @@
 
 <#include "header.ftl"/>
 
-<table class="profile">
-    <tr>
-        <td>${author.email}</td>
-        <td>${author.userName}</td>
-    </tr>
-</table>
+<div class="userProfile">
+<div class="userProfile__field">
+    <span>Email: </span>
+    <span>${author.email}</span>
+</div>
+<div class="userProfile__field">
+    <span>Full Name: </span>
+    <span>${author.userName}</span>
+</div>
+</div>
+
+
+
 
 <#include "footer.ftl"/>
 </body>

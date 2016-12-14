@@ -24,9 +24,21 @@
         <@p.post post/>
     </#list>
     </div>
-    <div class="jsPop" style="display:none">
+    <div class="jsPopPost" style="display:none">
         <form action="/api/post/" method="post">
-
+            <div class="form-group">
+                <label for="title">Title: </label>
+                <input type="text" class="form-control" name="title" id="title">
+            </div>
+            <div class="form-group">
+                <label for="content">Content: </label>
+                <textarea class="form-control" name="body" id="content"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="tags">tags: </label>
+                <input type="text" class="form-control" name="tags" id="tags">
+            </div>
+            <input type="button" class="bClose jsPost btn btn-default" value="create">
         </form>
     </div>
 </div>

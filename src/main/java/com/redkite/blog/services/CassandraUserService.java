@@ -3,6 +3,7 @@ package com.redkite.blog.services;
 
 import com.redkite.blog.dao.AuthorDao;
 import com.redkite.blog.model.Author;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -23,6 +24,7 @@ public class CassandraUserService implements UserDetailsService {
     try {
       Author author = authorDao.getAuthor(email);
       if (author == null) {
+
         return null;
       }
       return new User(author.getEmail(), author.getPassword(), new ArrayList<>());

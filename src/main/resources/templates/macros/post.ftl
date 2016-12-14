@@ -41,10 +41,11 @@
             </div>
         </div>
         <div class="comment_add jsAddComment">add a comment</div>
-        <div class="jsPopUpComment" style="display: none">
-            <form  action="/api/post/${post.id}/comment" method="post">
-                <input type="text" name="commentBody">
-                <button class="bClose jsComment"  value="submit">
+        <div class="jsPopUpComment" data-id="${post.id}" style="display: none">
+            <form  action="/api/post/$$$/comment" method="post">
+                <label for="com">Comment:</label>
+                <textarea class="form-control" name="commentBody" id="com" rows="5"></textarea>
+                <input type="button" class="bClose jsComment btn btn-default" value="create">
             </form>
         </div>
     </div>

@@ -59,7 +59,6 @@
     margin-top: 100px;
 }
 
-
 .content {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -167,4 +166,25 @@
 
 .create-post:hover {
     background: #f48024;
+}
+
+.jsPopUpComment {
+    width: 280px;
+    height: 180px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.jsPopUpComment textarea {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.jsPopPost {
+    width: 280px;
+    height: 300px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 3px;
 }

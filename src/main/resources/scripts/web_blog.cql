@@ -1,21 +1,21 @@
-DROP KEYSPACE IF EXISTS web_blog;
-CREATE KEYSPACE web_blog WITH replication = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
+DROP KEYSPACE IF EXISTS web_blog2;
+CREATE KEYSPACE web_blog2 WITH replication = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
 
 
-CREATE TYPE web_blog.comment (
+CREATE TYPE web_blog2.comment (
   comment_body text,
   publish_date timestamp,
   email varchar
 );
 
-CREATE TYPE web_blog.vote (
+CREATE TYPE web_blog2.vote (
   positive boolean,
   author_email varchar
 );
 
 
-CREATE TABLE web_blog.post (
-  id bigint PRIMARY KEY,
+CREATE TABLE web_blog2.post (
+  id uuid PRIMARY KEY,
   title varchar,
   post_body varchar,
   author varchar,
@@ -26,7 +26,7 @@ CREATE TABLE web_blog.post (
 );
 
 
-CREATE TABLE web_blog.author (
+CREATE TABLE web_blog2.author (
   email varchar PRIMARY KEY,
   user_name varchar,
   password varchar,
